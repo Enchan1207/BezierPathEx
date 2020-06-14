@@ -15,21 +15,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3lb-hm-GMz" customClass="CustomView" customModule="BezierPathEx" customModuleProvider="target">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZZZ-A9-5Ys">
                                 <rect key="frame" x="37.5" y="88.5" width="300" height="534"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzq-kV-lwz" customClass="CustomView" customModule="BezierPathEx" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="500" height="1000"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UIScrollView" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rxr-KA-PZX">
+                                                <rect key="frame" x="0.0" y="485" width="500" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Rxr-KA-PZX" firstAttribute="centerX" secondItem="qzq-kV-lwz" secondAttribute="centerX" id="Db2-1C-AgF"/>
+                                            <constraint firstItem="Rxr-KA-PZX" firstAttribute="centerY" secondItem="qzq-kV-lwz" secondAttribute="centerY" id="IB1-vo-enP"/>
+                                            <constraint firstAttribute="height" constant="1000" id="QfR-eY-Phg"/>
+                                            <constraint firstItem="Rxr-KA-PZX" firstAttribute="width" secondItem="qzq-kV-lwz" secondAttribute="width" id="Zqb-zd-Scz"/>
+                                            <constraint firstAttribute="width" constant="500" id="ega-kI-x3G"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="qzq-kV-lwz" secondAttribute="trailing" id="AxD-bl-OmB"/>
+                                    <constraint firstItem="qzq-kV-lwz" firstAttribute="leading" secondItem="ZZZ-A9-5Ys" secondAttribute="leading" id="Jmz-wR-wMS"/>
+                                    <constraint firstAttribute="bottom" secondItem="qzq-kV-lwz" secondAttribute="bottom" id="MLB-HJ-qJM"/>
+                                    <constraint firstItem="qzq-kV-lwz" firstAttribute="top" secondItem="ZZZ-A9-5Ys" secondAttribute="top" id="gOK-Qc-McO"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="N6l-sU-cdH"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="MTa-Z1-wY5"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3lb-hm-GMz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="1Ey-CN-OxK"/>
-                            <constraint firstItem="3lb-hm-GMz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="79x-xN-Cel"/>
-                            <constraint firstItem="3lb-hm-GMz" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.8" id="BeI-KS-db1"/>
-                            <constraint firstItem="3lb-hm-GMz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Gvv-eR-QzZ"/>
+                            <constraint firstItem="ZZZ-A9-5Ys" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="4oA-ba-cKH"/>
+                            <constraint firstItem="ZZZ-A9-5Ys" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="D1r-Pw-TI6"/>
+                            <constraint firstItem="ZZZ-A9-5Ys" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WbN-3O-D6Y"/>
+                            <constraint firstItem="ZZZ-A9-5Ys" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.8" id="iJF-zb-gIH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="UIBezierPathExample" id="Aqc-rf-DS1"/>
+                    <navigationItem key="navigationItem" title="UIBezierPathExample" id="Aqc-rf-DS1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="W1C-w9-9XJ">
+                            <connections>
+                                <action selector="onTapButton:" destination="BYZ-38-t0r" id="5GA-CS-HiQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="contentView" destination="qzq-kV-lwz" id="Cgh-R5-cmg"/>
+                        <outlet property="scrollView" destination="ZZZ-A9-5Ys" id="U2v-yi-d6z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

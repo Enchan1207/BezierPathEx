@@ -10,9 +10,10 @@ import Foundation
 import UIKit
 
 @IBDesignable class CustomView: UIView {
+    var colors: [UIColor] = [.blue, .red, .green, .purple]
+    
     override func draw(_ rect: CGRect){
         
-        let colors: [UIColor] = [.blue, .red, .green, .purple, .brown]
         let order = 30
         
         for (index, color) in colors.enumerated(){
@@ -25,5 +26,10 @@ import UIKit
             color.setStroke()
             path.stroke()
         }
+    }
+    
+    func addlines(){
+        self.colors.append(.brown)
+        self.setNeedsDisplay()
     }
 }
