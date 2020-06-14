@@ -17,14 +17,16 @@ import UIKit
         let order = 30
         
         for (index, color) in colors.enumerated(){
-            let path = UIBezierPath()
-            
-            path.move(to: CGPoint(x: index * order, y: 0))
-            path.addLine(to: CGPoint(x: index * order + order, y: 200))
-            path.close()
-            
-            color.setStroke()
-            path.stroke()
+            if(color == .brown){
+                let path = UIBezierPath()
+                
+                path.move(to: CGPoint(x: index * order, y: 0))
+                path.addLine(to: CGPoint(x: index * order + order, y: 200))
+                path.close()
+                
+                color.setStroke()
+                path.stroke()
+            }
         }
     }
     
