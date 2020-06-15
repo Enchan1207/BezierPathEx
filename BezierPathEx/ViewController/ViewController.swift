@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         // imageViewを作り、
         let uiiv = UIImageView(image: UIImage(systemName: "person.crop.circle"))
         uiiv.frame = CGRect(x: 100, y: 100, width: 200, height: 200)
-        uiiv.isUserInteractionEnabled = true
+        uiiv.isUserInteractionEnabled = true // なくてもいい?
         
         // Gesture Recognizerを作って
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(onPanuiiv(sender:)))
@@ -44,11 +44,14 @@ class ViewController: UIViewController {
         // 移動量を取得し、viewを移動
         let moved = sender.translation(in: self.contentView)
         if let target = sender.view {
+            
             let moveto = CGPoint(x: target.center.x + moved.x, y: target.center.y + moved.y)
             
             target.center.x = moveto.x
             target.center.y = moveto.y
         }
+        
+        // pangestureは継続的に移動量を検出し続けるので、移動処理を挟むたびにリセットしてやる
         sender.setTranslation(CGPoint(x: 0, y: 0), in: self.contentView)
     }
 
