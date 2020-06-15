@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZZZ-A9-5Ys">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="ZZZ-A9-5Ys">
                                 <rect key="frame" x="37.5" y="88.5" width="300" height="534"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzq-kV-lwz" customClass="CustomView" customModule="BezierPathEx" customModuleProvider="target">
@@ -29,6 +29,7 @@
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="Rxr-KA-PZX" firstAttribute="centerX" secondItem="qzq-kV-lwz" secondAttribute="centerX" id="Db2-1C-AgF"/>
                                             <constraint firstItem="Rxr-KA-PZX" firstAttribute="centerY" secondItem="qzq-kV-lwz" secondAttribute="centerY" id="IB1-vo-enP"/>
@@ -36,8 +37,12 @@
                                             <constraint firstItem="Rxr-KA-PZX" firstAttribute="width" secondItem="qzq-kV-lwz" secondAttribute="width" id="Zqb-zd-Scz"/>
                                             <constraint firstAttribute="width" constant="500" id="ega-kI-x3G"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="D2k-M0-TNV" appends="YES" id="JfM-gS-Bdc"/>
+                                        </connections>
                                     </view>
                                 </subviews>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="qzq-kV-lwz" secondAttribute="trailing" id="AxD-bl-OmB"/>
                                     <constraint firstItem="qzq-kV-lwz" firstAttribute="leading" secondItem="ZZZ-A9-5Ys" secondAttribute="leading" id="Jmz-wR-wMS"/>
@@ -70,6 +75,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="D2k-M0-TNV">
+                    <connections>
+                        <action selector="onTapContentView:" destination="BYZ-38-t0r" id="sSF-Cz-Drs"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1077.5999999999999" y="95.802098950524751"/>
         </scene>

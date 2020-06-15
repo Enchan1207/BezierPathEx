@@ -15,6 +15,7 @@
 		9E57F9112495FFFE00471C07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E57F90F2495FFFE00471C07 /* LaunchScreen.storyboard */; };
 		9E57F9192496007C00471C07 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E57F9182496007C00471C07 /* CustomView.swift */; };
 		9E57F91B249657B100471C07 /* ScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E57F91A249657B100471C07 /* ScrollViewDelegate.swift */; };
+		9EA792BD2496E9440097B921 /* GestureRecognizerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA792BC2496E9440097B921 /* GestureRecognizerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		9E57F9122495FFFE00471C07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E57F9182496007C00471C07 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		9E57F91A249657B100471C07 /* ScrollViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewDelegate.swift; sourceTree = "<group>"; };
+		9EA792BC2496E9440097B921 /* GestureRecognizerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureRecognizerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				9E57F9082495FFFB00471C07 /* ViewController.swift */,
 				9E57F91A249657B100471C07 /* ScrollViewDelegate.swift */,
+				9EA792BC2496E9440097B921 /* GestureRecognizerDelegate.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				9E57F91B249657B100471C07 /* ScrollViewDelegate.swift in Sources */,
 				9E57F9192496007C00471C07 /* CustomView.swift in Sources */,
 				9E57F9052495FFFB00471C07 /* AppDelegate.swift in Sources */,
+				9EA792BD2496E9440097B921 /* GestureRecognizerDelegate.swift in Sources */,
 				9E57F9072495FFFB00471C07 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
